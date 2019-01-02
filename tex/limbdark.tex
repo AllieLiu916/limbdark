@@ -851,7 +851,7 @@ order $N$ as
     \label{eq:polynomialld}
     \frac{I(\upmu)}{I_0} &= 1 - u_1 (1 - \upmu) - u_2 (1 - \upmu)^2 - 
                                 ... - u_{N}(1 - \upmu)^{N} \nonumber \\
-                          &= \sum_{i=0}^N u_i (1 - \upmu)^i
+                          &= -\sum_{i=0}^N u_i (1 - \upmu)^i
 \end{align}
 %
 where $I_0 \equiv I(1)$, $u_0 \equiv -1$, and $\upmu$
@@ -875,7 +875,7 @@ and $\ubasis$ be the \emph{limb darkening basis}
 %
 \begin{align}
     \label{eq:ldbasis}
-    \ubasis = \begin{pmatrix}
+    \ubasis = -\begin{pmatrix}
         1 & &
         (1 - z) & &
         (1 - z)^2 & &
@@ -945,14 +945,14 @@ the $i^\mathrm{th}$ coefficient of $\mathfrak{p}$ as
 %
 \begin{equation}
     \label{eq:an_of_un}
-    \mathfrak{p}_i = \sum_{j=0}^N \binom{i}{j}(-1)^{j} u_j.
+    \mathfrak{p}_i = \sum_{j=0}^N \binom{i}{j}(-1)^{j+1} u_j.
 \end{equation}
 %
 The elements of the matrix $\bvec{A}_1$ are thus given by
 %
 \begin{align}
     \label{eq:A1}
-    \mathcal{A}_{1_{i, j}} = \binom{i}{j}(-1)^{j} \quad .
+    \mathcal{A}_{1_{i, j}} = \binom{i}{j}(-1)^{j+1} \quad .
 \end{align}
 %
 Note that, as with the limb darkening basis, 
