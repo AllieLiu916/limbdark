@@ -61,7 +61,7 @@ def GetGimenezPolynomialCoeffs(u):
     return g, err
 
 
-Narr = [1, 3, 5, 10, 15, 20, 30, 40, 50]
+Narr = np.array([1, 3, 5, 10, 15, 20, 30, 40, 50])[::-1]
 b = np.linspace(0.0, 1.1, 1000)
 
 agol_time = np.empty(len(Narr))
